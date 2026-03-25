@@ -1,0 +1,1 @@
+from flask import Flask, render_template, request, redirect, url_for\n\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    return render_template('index.html')\n\n@app.route('/dashboard')\ndef dashboard():\n    # Logic for stock market analysis would be implemented here\n    return render_template('dashboard.html')\n\nif __name__ == '__main__':\n    app.run(debug=True)
